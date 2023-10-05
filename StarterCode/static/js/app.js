@@ -78,6 +78,7 @@ function optionChanged(dataset) {
 
     // Redraw the metadata table
     d3.selectAll('td').remove()
+    d3.selectAll('tr').remove()
     for (item in metadata[dataset]){
       d3.select('tbody').append('tr').append('td').text(`${item}: ${metadata[dataset][item]}`);
     };
